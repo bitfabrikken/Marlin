@@ -104,13 +104,13 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 0
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 -1
+#define SERIAL_PORT_2 0
 
 /**
  * This setting determines the communication speed of the printer.
@@ -493,9 +493,9 @@
   // #define DEFAULT_Kp 20.10
   // #define DEFAULT_Ki 2.59
   // #define DEFAULT_Kd 38.99
-  #define DEFAULT_Kp 18.64
-  #define DEFAULT_Ki 2.23
-  #define DEFAULT_Kd 38.92
+  #define DEFAULT_Kp 19.05
+  #define DEFAULT_Ki 2.43
+  #define DEFAULT_Kd 37.29
   // MakerGear
   //#define DEFAULT_Kp 7.0
   //#define DEFAULT_Ki 0.1
@@ -545,9 +545,9 @@
   // #define DEFAULT_bedKp 244.21
   // #define DEFAULT_bedKi 45.87
   // #define DEFAULT_bedKd 325.08
-  #define DEFAULT_bedKp 34.51
-  #define DEFAULT_bedKi 3.71
-  #define DEFAULT_bedKd 214.31
+  #define DEFAULT_bedKp 31.92
+  #define DEFAULT_bedKi 3.14
+  #define DEFAULT_bedKd 216.44
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
@@ -764,7 +764,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 20, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 40, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -804,7 +804,7 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-//#define CLASSIC_JERK
+#define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
   #define DEFAULT_XJERK 8.0
   #define DEFAULT_YJERK 8.0
